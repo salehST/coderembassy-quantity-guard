@@ -55,6 +55,7 @@ class CEQG_Plugin {
 		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-product-fields.php';
 		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-variation-fields.php';
 		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-frontend.php';
+		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-validation.php';
 	}
 
 	/**
@@ -74,6 +75,9 @@ class CEQG_Plugin {
 
 		$frontend = new CEQG_Frontend();
 		$frontend->run();
+
+		$validation = new CEQG_Validation();
+		$validation->run();
 	}
 
 	/**
