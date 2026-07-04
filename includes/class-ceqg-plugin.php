@@ -52,6 +52,7 @@ class CEQG_Plugin {
 		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-settings.php';
 		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-rule-engine.php';
 		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-messages.php';
+		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-debug.php';
 		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-product-fields.php';
 		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-variation-fields.php';
 		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-frontend.php';

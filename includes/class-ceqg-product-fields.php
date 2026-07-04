@@ -124,7 +124,10 @@ class CEQG_Product_Fields {
 			</div>
 
 			<div class="options_group ceqg-rule-preview">
-				<?php $this->render_rule_preview( $product ); ?>
+				<?php
+				$debug = new CEQG_Debug();
+				$debug->render_product_rule_preview( $product );
+				?>
 			</div>
 		</div>
 		<?php
@@ -234,63 +237,6 @@ class CEQG_Product_Fields {
 				),
 			)
 		);
-	}
-
-	/**
-	 * Render the active rule preview.
-	 *
-	 * @param WC_Product $product Product object.
-	 * @return void
-	 */
-	private function render_rule_preview( $product ) {
-		$engine = new CEQG_Rule_Engine();
-		$rule   = $engine->resolve_rule( $product->get_id() );
-
-		?>
-		<div class="ceqg-rule-preview-box">
-			<p><strong><?php echo esc_html__( 'Rule preview', 'coderembassy-quantity-guard' ); ?></strong></p>
-			<ul>
-				<li>
-					<?php
-					printf(
-						/* translators: %s: rule source label. */
-						esc_html__( 'Active source: %s', 'coderembassy-quantity-guard' ),
-						esc_html( $rule['source_label'] )
-					);
-					?>
-				</li>
-				<li>
-					<?php
-					printf(
-						/* translators: 1: min quantity, 2: max quantity, 3: step quantity, 4: default quantity. */
-						esc_html__( 'Min: %1$s, Max: %2$s, Step: %3$s, Default: %4$s', 'coderembassy-quantity-guard' ),
-						esc_html( $rule['min'] ),
-						esc_html( '' === $rule['max'] ? __( 'None', 'coderembassy-quantity-guard' ) : $rule['max'] ),
-						esc_html( $rule['step'] ),
-						esc_html( $rule['default'] )
-					);
-					?>
-				</li>
-				<li>
-					<?php echo esc_html( $this->get_rule_reason( $rule['source'] ) ); ?>
-				</li>
-			</ul>
-		</div>
-		<?php
-	}
-
-	/**
-	 * Explain why a rule source is active.
-	 *
-	 * @param string $source Rule source.
-	 * @return string
-	 */
-	private function get_rule_reason( $source ) {
-		if ( 'product' === $source ) {
-			return __( 'This product has its own enabled rule, so it replaces the global rule.', 'coderembassy-quantity-guard' );
-		}
-
-		return __( 'No product rule is currently active, so the global rule applies.', 'coderembassy-quantity-guard' );
 	}
 
 	/**
