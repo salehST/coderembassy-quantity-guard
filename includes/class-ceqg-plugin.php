@@ -25,6 +25,9 @@ class CEQG_Plugin {
 			add_action( 'admin_notices', array( $this, 'render_woocommerce_missing_notice' ) );
 			return;
 		}
+
+		$this->load_dependencies();
+		$this->register_components();
 	}
 
 	/**
@@ -38,6 +41,25 @@ class CEQG_Plugin {
 			false,
 			dirname( CEQG_PLUGIN_BASENAME ) . '/languages'
 		);
+	}
+
+	/**
+	 * Load WooCommerce-dependent plugin classes.
+	 *
+	 * @return void
+	 */
+	private function load_dependencies() {
+		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-settings.php';
+	}
+
+	/**
+	 * Register WooCommerce-dependent plugin components.
+	 *
+	 * @return void
+	 */
+	private function register_components() {
+		$settings = new CEQG_Settings();
+		$settings->run();
 	}
 
 	/**
