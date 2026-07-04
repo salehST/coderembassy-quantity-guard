@@ -185,6 +185,7 @@ class CEQG_Variation_Fields {
 		}
 
 		$engine = new CEQG_Rule_Engine();
+		$messages = new CEQG_Messages();
 		$rule   = $engine->resolve_rule( $product->get_id(), $variation->get_id() );
 
 		$variation_data['ceqg_rule'] = array(
@@ -194,6 +195,7 @@ class CEQG_Variation_Fields {
 			'max'          => $rule['max'],
 			'step'         => $rule['step'],
 			'default'      => $rule['default'],
+			'message'      => $messages->get_rule_summary( $rule ),
 		);
 
 		return $variation_data;

@@ -2,13 +2,17 @@
 	'use strict';
 
 	function formatMessage( rule ) {
-		var template = ceqgFrontend.messageLabel || 'Quantity: minimum {min}, maximum {max}, step {step}.';
+		if ( rule.message ) {
+			return rule.message;
+		}
+
+		var template = ceqgFrontend.messageLabel || 'Quantity: minimum {min_qty}, maximum {max_qty}, step {step_qty}.';
 		var max = rule.max === '' ? ceqgFrontend.noneLabel : rule.max;
 
 		return template
-			.replace( '{min}', rule.min )
-			.replace( '{max}', max )
-			.replace( '{step}', rule.step );
+			.replace( '{min_qty}', rule.min )
+			.replace( '{max_qty}', max )
+			.replace( '{step_qty}', rule.step );
 	}
 
 	function getQuantityInput( $form ) {

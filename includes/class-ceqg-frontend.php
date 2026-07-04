@@ -21,10 +21,18 @@ class CEQG_Frontend {
 	private $rule_engine;
 
 	/**
+	 * Message builder.
+	 *
+	 * @var CEQG_Messages
+	 */
+	private $messages;
+
+	/**
 	 * Constructor.
 	 */
 	public function __construct() {
 		$this->rule_engine = new CEQG_Rule_Engine();
+		$this->messages    = new CEQG_Messages();
 	}
 
 	/**
@@ -84,7 +92,7 @@ class CEQG_Frontend {
 
 		printf(
 			'<p class="ceqg-rule-message" data-ceqg-rule-message>%s</p>',
-			esc_html( $this->format_rule_message( $rule ) )
+			$this->messages->get_escaped_rule_summary( $rule )
 		);
 	}
 
@@ -118,7 +126,7 @@ class CEQG_Frontend {
 			'ceqgFrontend',
 			array(
 				'noneLabel'    => __( 'none', 'coderembassy-quantity-guard' ),
-				'messageLabel' => __( 'Quantity: minimum {min}, maximum {max}, step {step}.', 'coderembassy-quantity-guard' ),
+				'messageLabel' => __( 'Quantity: minimum {min_qty}, maximum {max_qty}, step {step_qty}.', 'coderembassy-quantity-guard' ),
 			)
 		);
 	}
@@ -245,23 +253,6 @@ class CEQG_Frontend {
 		}
 
 		return $this->rule_engine->resolve_rule( $product->get_id() );
-	}
-
-	/**
-	 * Format a lightweight frontend rule message.
-	 *
-	 * @param array $rule Resolved rule.
-	 * @return string
-	 */
-	private function format_rule_message( $rule ) {
-		return strtr(
-			__( 'Quantity: minimum {min}, maximum {max}, step {step}.', 'coderembassy-quantity-guard' ),
-			array(
-				'{min}'  => $rule['min'],
-				'{max}'  => '' === $rule['max'] ? __( 'none', 'coderembassy-quantity-guard' ) : $rule['max'],
-				'{step}' => $rule['step'],
-			)
-		);
 	}
 
 	/**
