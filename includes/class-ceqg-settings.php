@@ -368,6 +368,10 @@ class CEQG_Settings {
 		);
 
 		if ( '' !== $settings['global_max'] && $settings['global_max'] < $settings['global_min'] ) {
+			$warnings[] = __(
+				'Maximum quantity was lower than the minimum, so it was adjusted to match the minimum.',
+				'coderembassy-quantity-guard'
+			);
 			$settings['global_max'] = $settings['global_min'];
 		}
 

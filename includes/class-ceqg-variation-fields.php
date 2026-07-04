@@ -149,6 +149,12 @@ class CEQG_Variation_Fields {
 
 		if ( '' !== $max && $max < $min ) {
 			$max = $min;
+			$this->store_admin_warning(
+				__(
+					'Quantity Guard adjusted the variation maximum to match the variation minimum because maximum cannot be lower than minimum.',
+					'coderembassy-quantity-guard'
+				)
+			);
 		}
 
 		$default = $this->normalize_quantity_to_rule( $default, $min, $max, $step );
@@ -371,7 +377,15 @@ class CEQG_Variation_Fields {
 	 * @return void
 	 */
 	private function store_admin_warning( $message ) {
-		set_transient( $this->get_warning_transient_key(), sanitize_text_field( $message ), MINUTE_IN_SECONDS );
+		$key      = $this->get_warning_transient_key();
+		$existing = get_transient( $key );
+		$message  = sanitize_text_field( $message );
+
+		if ( $existing ) {
+			$message = sanitize_text_field( $existing ) . ' ' . $message;
+		}
+
+		set_transient( $key, $message, MINUTE_IN_SECONDS );
 	}
 
 	/**
