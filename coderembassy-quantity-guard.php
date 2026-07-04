@@ -38,14 +38,17 @@ add_action( 'before_woocommerce_init', 'ceqg_declare_woocommerce_compatibility' 
 /**
  * Declare WooCommerce feature compatibility that is already safe in Phase 1.
  *
- * Cart and Checkout Blocks compatibility is declared after Store API support lands.
- *
  * @return void
  */
 function ceqg_declare_woocommerce_compatibility() {
 	if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
 		\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility(
 			'custom_order_tables',
+			__FILE__,
+			true
+		);
+		\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility(
+			'cart_checkout_blocks',
 			__FILE__,
 			true
 		);
