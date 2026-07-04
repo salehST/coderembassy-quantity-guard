@@ -1,0 +1,7 @@
+# Copyright (C) 2026 CoderEmbassy
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CoderEmbassy Quantity Guard for WooCommerce 0.1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
