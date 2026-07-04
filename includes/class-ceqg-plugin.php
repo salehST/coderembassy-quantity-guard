@@ -51,6 +51,7 @@ class CEQG_Plugin {
 	private function load_dependencies() {
 		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-settings.php';
 		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-rule-engine.php';
+		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-product-fields.php';
 	}
 
 	/**
@@ -61,6 +62,9 @@ class CEQG_Plugin {
 	private function register_components() {
 		$settings = new CEQG_Settings();
 		$settings->run();
+
+		$product_fields = new CEQG_Product_Fields();
+		$product_fields->run();
 	}
 
 	/**
