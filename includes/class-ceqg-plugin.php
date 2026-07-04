@@ -53,6 +53,7 @@ class CEQG_Plugin {
 		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-rule-engine.php';
 		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-product-fields.php';
 		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-variation-fields.php';
+		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-frontend.php';
 	}
 
 	/**
@@ -69,6 +70,9 @@ class CEQG_Plugin {
 
 		$variation_fields = new CEQG_Variation_Fields();
 		$variation_fields->run();
+
+		$frontend = new CEQG_Frontend();
+		$frontend->run();
 	}
 
 	/**
