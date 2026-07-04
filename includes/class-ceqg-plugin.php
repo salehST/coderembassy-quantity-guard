@@ -50,6 +50,7 @@ class CEQG_Plugin {
 	 */
 	private function load_dependencies() {
 		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-settings.php';
+		require_once CEQG_PLUGIN_DIR . 'includes/class-ceqg-rule-engine.php';
 	}
 
 	/**
