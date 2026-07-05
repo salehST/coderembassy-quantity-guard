@@ -65,7 +65,7 @@
 		$node.attr( attr, value );
 	}
 
-	function applyRule( $form, rule ) {
+	function applyRule( $form, rule, updateValue ) {
 		var $qty = getQuantityInput( $form );
 		var $message = getMessageNode( $form );
 
@@ -74,14 +74,43 @@
 		}
 
 		rememberOriginalState( $form );
+		$form.data( 'ceqgActiveRule', rule );
 
 		$qty.attr( 'min', rule.min );
 		setOrRemoveAttr( $qty, 'max', rule.max );
 		$qty.attr( 'step', rule.step );
-		$qty.val( rule.default );
+
+		if ( updateValue || ! $qty.val() ) {
+			$qty.val( rule.default );
+		}
 
 		if ( $message.length ) {
 			$message.text( formatMessage( rule ) );
+		}
+	}
+
+	function getSelectedVariationRule( $form ) {
+		var variationId = parseInt( $form.find( 'input[name="variation_id"]' ).val(), 10 );
+		var variations = $form.data( 'product_variations' );
+
+		if ( ! variationId || ! $.isArray( variations ) ) {
+			return $form.data( 'ceqgActiveRule' );
+		}
+
+		for ( var index = 0; index < variations.length; index++ ) {
+			if ( parseInt( variations[ index ].variation_id, 10 ) === variationId && variations[ index ].ceqg_rule ) {
+				return variations[ index ].ceqg_rule;
+			}
+		}
+
+		return $form.data( 'ceqgActiveRule' );
+	}
+
+	function applySelectedVariationRule( $form, updateValue ) {
+		var rule = getSelectedVariationRule( $form );
+
+		if ( rule ) {
+			applyRule( $form, rule, updateValue );
 		}
 	}
 
@@ -89,11 +118,31 @@
 		$( '.variations_form' )
 			.on( 'found_variation', function ( event, variation ) {
 				if ( variation && variation.ceqg_rule ) {
-					applyRule( $( this ), variation.ceqg_rule );
+					applyRule( $( this ), variation.ceqg_rule, true );
+					setTimeout( applyRule.bind( null, $( this ), variation.ceqg_rule, false ), 0 );
 				}
+			} )
+			.on( 'show_variation woocommerce_variation_has_changed', function () {
+				var $form = $( this );
+
+				setTimeout( function () {
+					applySelectedVariationRule( $form, false );
+				}, 0 );
 			} )
 			.on( 'reset_data hide_variation', function () {
 				restoreOriginalState( $( this ) );
 			} );
+
+		$( document ).on( 'focus mousedown touchstart keydown', '.variations_form .quantity input.qty', function () {
+			applySelectedVariationRule( $( this ).closest( '.variations_form' ), false );
+		} );
+
+		$( '.variations_form' ).each( function () {
+			var $form = $( this );
+
+			setTimeout( function () {
+				applySelectedVariationRule( $form, true );
+			}, 0 );
+		} );
 	} );
 }( jQuery ) );

@@ -193,6 +193,20 @@ class CEQG_Variation_Fields {
 		$engine = new CEQG_Rule_Engine();
 		$messages = new CEQG_Messages();
 		$rule   = $engine->resolve_rule( $product->get_id(), $variation->get_id() );
+		$max_qty = isset( $variation_data['max_qty'] ) ? $variation_data['max_qty'] : '';
+
+		if ( '' !== $rule['max'] ) {
+			$max_qty = is_numeric( $max_qty ) && (int) $max_qty > 0
+				? min( (int) $max_qty, $rule['max'] )
+				: $rule['max'];
+		}
+
+		$variation_data['min_qty'] = max(
+			isset( $variation_data['min_qty'] ) ? absint( $variation_data['min_qty'] ) : 1,
+			absint( $rule['min'] )
+		);
+		$variation_data['max_qty'] = $max_qty;
+		$variation_data['step']    = absint( $rule['step'] );
 
 		$variation_data['ceqg_rule'] = array(
 			'source'       => $rule['source'],
