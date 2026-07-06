@@ -11,6 +11,8 @@ Last updated: 2026-07-06
 - Workspace path: `C:\Users\User\Desktop\My Plugins\New Plugin\coderembassy-quantity-guard`
 - Localhost test plugin path: `C:\laragon\www\plugins\wp-content\plugins\coderembassy-quantity-guard`
 - Release prep baseline commit: `578c8d1 Add project progress handoff`
+- Latest release prep commit: `091c0f1 Prepare 1.0.0 release`
+- GitHub release: `https://github.com/salehST/coderembassy-quantity-guard/releases/tag/v1.0.0`
 - Latest ZIP built: `C:\Users\User\Desktop\My Plugins\New Plugin\releases\coderembassy-quantity-guard-release-20260706-205254\coderembassy-quantity-guard-1.0.0.zip`
 
 ## Current Status
@@ -24,6 +26,7 @@ Last updated: 2026-07-06
 - Translation template now includes the dashboard strings.
 - Final local smoke checks passed after copying the updated plugin to Laragon.
 - Final installable `1.0.0` ZIP has been built and inspected.
+- GitHub Release `v1.0.0` has been published with the ZIP asset attached.
 
 ## Completed Phases
 
@@ -98,6 +101,7 @@ Last updated: 2026-07-06
 - [x] Admin dashboard branding and one-logo layout accepted for now
 - [x] Final `1.0.0` admin save smoke passed with global rule min `3`, max `9`, step `3`, default `3`
 - [x] Final `1.0.0` storefront quantity smoke passed on product `Bivoks Salve - Stick`
+- [x] GitHub Release `v1.0.0` published with `coderembassy-quantity-guard-1.0.0.zip` attached
 
 ## Verification Commands Used
 
@@ -122,6 +126,7 @@ git status --short
 
 ## Recent Commits
 
+- `091c0f1` Prepare 1.0.0 release
 - `578c8d1` Add project progress handoff
 - `6db1ca4` Polish Quantity Guard admin dashboard
 - `fe776a8` Keep variation quantity spinner aligned with rules
@@ -147,8 +152,8 @@ git status --short
 - [x] Do one final product page quantity test after the dashboard polish, just to ensure no accidental regression.
 - [ ] Optionally test Store API directly with invalid and valid quantities.
 - [x] Build final release ZIP after the version decision.
-- [ ] If version is final, create a GitHub tag such as `v1.0.0`.
-- [ ] Optional: create a GitHub release and attach the ZIP.
+- [x] If version is final, create a GitHub tag such as `v1.0.0`.
+- [x] Optional: create a GitHub release and attach the ZIP.
 - [ ] Optional: add plugin screenshots or banner assets if this will be distributed beyond direct ZIP install.
 
 ## Direct Store API Test To Run Later
