@@ -1,1 +1,572 @@
-/* Admin styles will be added in later phases. */
+#wpcontent {
+	background: #f4f6fb;
+}
+
+#wpbody-content {
+	padding-bottom: 36px;
+}
+
+.ceqg-settings {
+	margin: 24px 24px 0 2px;
+	color: #172033;
+}
+
+.ceqg-settings * {
+	box-sizing: border-box;
+}
+
+#wpbody-content > .notice:not(.ceqg-notice),
+#wpbody-content > .updated,
+#wpbody-content > .error,
+#wpbody-content > .e-notice,
+#wpbody-content > .elementor-message,
+.ceqg-settings .notice:not(.ceqg-notice),
+.ceqg-settings .updated,
+.ceqg-settings .error,
+.ceqg-settings .e-notice,
+.ceqg-settings .elementor-message {
+	display: none !important;
+}
+
+.ceqg-shell {
+	max-width: 1280px;
+}
+
+.ceqg-hero {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(288px, 330px);
+	gap: 24px;
+	align-items: center;
+	margin: 0 0 22px;
+	padding: 28px 30px;
+	overflow: hidden;
+	border: 1px solid #dfe5ff;
+	border-radius: 8px;
+	background:
+		linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(243, 246, 255, 0.96) 50%, rgba(247, 242, 255, 0.94) 100%),
+		#ffffff;
+	box-shadow: 0 16px 40px rgba(36, 42, 74, 0.08);
+}
+
+.ceqg-hero__content {
+	min-width: 0;
+}
+
+.ceqg-hero__top {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 18px;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-bottom: 22px;
+}
+
+.ceqg-logo {
+	display: block;
+	width: min(220px, 100%);
+	height: auto;
+	margin: 0;
+}
+
+.ceqg-kicker {
+	margin: 0 0 10px;
+	color: #5a38f0;
+	font-size: 12px;
+	font-weight: 800;
+	line-height: 1.4;
+	text-transform: uppercase;
+}
+
+.ceqg-hero h1 {
+	max-width: 760px;
+	margin: 0;
+	color: #101828;
+	font-size: 28px;
+	font-weight: 800;
+	line-height: 1.16;
+}
+
+.ceqg-hero__copy {
+	max-width: 720px;
+	margin: 12px 0 0;
+	color: #526070;
+	font-size: 15px;
+	line-height: 1.7;
+}
+
+.ceqg-badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	justify-content: flex-end;
+	max-width: 440px;
+	margin: 0;
+}
+
+.ceqg-badge {
+	display: inline-flex;
+	align-items: center;
+	min-height: 28px;
+	padding: 5px 10px;
+	border: 1px solid rgba(91, 61, 245, 0.16);
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.76);
+	color: #344054;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	box-shadow: 0 4px 14px rgba(16, 24, 40, 0.05);
+}
+
+.ceqg-badge--free {
+	border-color: rgba(205, 250, 46, 0.78);
+	background: #d9ff3f;
+	color: #182100;
+}
+
+.ceqg-hero__summary {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	width: 100%;
+	padding: 16px;
+	border: 1px solid #e4e9f6;
+	border-radius: 8px;
+	background: rgba(255, 255, 255, 0.84);
+	box-shadow:
+		inset 0 1px 0 rgba(255, 255, 255, 0.92),
+		0 12px 24px rgba(16, 24, 40, 0.06);
+}
+
+.ceqg-summary-heading {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 12px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #edf0f6;
+}
+
+.ceqg-summary-heading span {
+	color: #667085;
+	font-size: 11px;
+	font-weight: 800;
+	line-height: 1.1;
+	text-transform: uppercase;
+}
+
+.ceqg-summary-heading strong {
+	color: #101828;
+	font-size: 13px;
+	font-weight: 800;
+	line-height: 1.2;
+	text-align: right;
+}
+
+.ceqg-status {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	min-height: 34px;
+	border-radius: 8px;
+	font-size: 13px;
+	font-weight: 800;
+}
+
+.ceqg-status .dashicons {
+	width: 16px;
+	height: 16px;
+	font-size: 16px;
+}
+
+.ceqg-status--active {
+	background: #ecfdf3;
+	color: #027a48;
+}
+
+.ceqg-status--paused {
+	background: #fff7ed;
+	color: #b45309;
+}
+
+.ceqg-rule-metrics {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px;
+}
+
+.ceqg-rule-metrics div {
+	min-width: 0;
+	padding: 13px;
+	border: 1px solid #e5e9f4;
+	border-radius: 8px;
+	background: #ffffff;
+	box-shadow: 0 1px 0 rgba(16, 24, 40, 0.02);
+}
+
+.ceqg-rule-metrics span {
+	display: block;
+	margin-bottom: 7px;
+	color: #667085;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.ceqg-rule-metrics strong {
+	display: block;
+	overflow-wrap: anywhere;
+	color: #101828;
+	font-size: 22px;
+	font-weight: 800;
+	line-height: 1.1;
+}
+
+.ceqg-settings .notice {
+	margin: 0 0 18px;
+	border-radius: 0 8px 8px 0;
+	box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+}
+
+.ceqg-form {
+	display: grid;
+	gap: 18px;
+	padding-bottom: 86px;
+}
+
+.ceqg-card {
+	overflow: hidden;
+	border: 1px solid #dfe5ee;
+	border-radius: 8px;
+	background: #ffffff;
+	box-shadow: 0 8px 24px rgba(16, 24, 40, 0.055);
+}
+
+.ceqg-card__header {
+	display: flex;
+	gap: 12px;
+	align-items: flex-start;
+	padding: 18px 20px;
+	border-bottom: 1px solid #edf0f6;
+	background: #fbfcff;
+}
+
+.ceqg-card__header > .dashicons {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 8px;
+	background: #f0edff;
+	color: #5b3df5;
+	font-size: 18px;
+	line-height: 1;
+}
+
+.ceqg-card__header h2 {
+	margin: 0;
+	color: #101828;
+	font-size: 16px;
+	font-weight: 800;
+	line-height: 1.3;
+}
+
+.ceqg-card__header p {
+	margin: 4px 0 0;
+	color: #667085;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.ceqg-card__body {
+	padding: 22px;
+}
+
+.ceqg-grid {
+	display: grid;
+	gap: 18px;
+}
+
+.ceqg-grid--rules {
+	grid-template-columns: repeat(4, minmax(150px, 1fr));
+}
+
+.ceqg-grid--messages {
+	grid-template-columns: 1fr;
+}
+
+.ceqg-field {
+	min-width: 0;
+}
+
+.ceqg-field__label {
+	display: block;
+	margin-bottom: 8px;
+	color: #1d2939;
+	font-size: 13px;
+	font-weight: 800;
+}
+
+.ceqg-input {
+	width: 100%;
+	min-height: 42px;
+	margin: 0;
+	border: 1px solid #cfd8e7;
+	border-radius: 6px;
+	background: #fcfdff;
+	color: #101828;
+	font-size: 14px;
+	line-height: 1.4;
+	box-shadow: none;
+	transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.ceqg-input--number {
+	max-width: 160px;
+	padding: 8px 10px;
+	font-weight: 700;
+}
+
+.ceqg-textarea {
+	min-height: 86px;
+	padding: 10px 12px;
+	resize: vertical;
+}
+
+.ceqg-input:focus {
+	border-color: #5b3df5;
+	box-shadow: 0 0 0 3px rgba(91, 61, 245, 0.14);
+	outline: none;
+}
+
+.ceqg-field__help {
+	max-width: 620px;
+	margin: 8px 0 0;
+	color: #667085;
+	font-size: 12.5px;
+	line-height: 1.55;
+}
+
+.ceqg-toggle,
+.ceqg-checkline {
+	position: relative;
+	display: flex;
+	gap: 14px;
+	align-items: center;
+	max-width: 760px;
+	padding: 16px;
+	border: 1px solid #e4e9f2;
+	border-radius: 8px;
+	background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+}
+
+.ceqg-toggle input,
+.ceqg-checkline input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.ceqg-toggle__track {
+	position: relative;
+	flex: 0 0 auto;
+	width: 52px;
+	height: 30px;
+	border-radius: 999px;
+	background: #d0d5dd;
+	box-shadow: inset 0 0 0 1px rgba(16, 24, 40, 0.06);
+	transition: background 160ms ease, box-shadow 160ms ease;
+}
+
+.ceqg-toggle__track::before {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: #ffffff;
+	box-shadow: 0 2px 8px rgba(16, 24, 40, 0.24);
+	content: "";
+	transition: transform 160ms ease;
+}
+
+.ceqg-toggle input:checked + .ceqg-toggle__track {
+	background: #5b3df5;
+}
+
+.ceqg-toggle input:checked + .ceqg-toggle__track::before {
+	transform: translateX(22px);
+}
+
+.ceqg-toggle input:focus-visible + .ceqg-toggle__track,
+.ceqg-checkline input:focus-visible + .ceqg-checkline__box {
+	box-shadow: 0 0 0 3px rgba(91, 61, 245, 0.2);
+}
+
+.ceqg-toggle strong,
+.ceqg-checkline strong {
+	display: block;
+	margin-bottom: 4px;
+	color: #101828;
+	font-size: 14px;
+	line-height: 1.35;
+}
+
+.ceqg-toggle small,
+.ceqg-checkline small {
+	display: block;
+	color: #667085;
+	font-size: 13px;
+	line-height: 1.45;
+}
+
+.ceqg-checkline__box {
+	display: inline-flex;
+	flex: 0 0 auto;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	border: 1px solid #cfd7e6;
+	border-radius: 6px;
+	background: #ffffff;
+	color: #ffffff;
+	font-family: dashicons;
+	font-size: 16px;
+	line-height: 1;
+}
+
+.ceqg-checkline__box::before {
+	content: "\f147";
+}
+
+.ceqg-checkline input:checked + .ceqg-checkline__box {
+	border-color: #5b3df5;
+	background: #5b3df5;
+}
+
+.ceqg-actions {
+	position: sticky;
+	bottom: 0;
+	z-index: 4;
+	display: flex;
+	gap: 16px;
+	align-items: center;
+	justify-content: space-between;
+	padding: 14px 16px;
+	border: 1px solid #dfe5ee;
+	border-radius: 8px 8px 0 0;
+	background: rgba(255, 255, 255, 0.96);
+	box-shadow: 0 -10px 28px rgba(16, 24, 40, 0.08);
+	backdrop-filter: blur(8px);
+}
+
+.ceqg-actions strong {
+	display: block;
+	color: #101828;
+	font-size: 13px;
+}
+
+.ceqg-actions span {
+	display: block;
+	margin-top: 3px;
+	color: #667085;
+	font-size: 12.5px;
+}
+
+.ceqg-settings .ceqg-save-button {
+	min-height: 40px;
+	padding: 0 18px !important;
+	border-color: #5b3df5 !important;
+	border-radius: 6px !important;
+	background: #5b3df5 !important;
+	font-weight: 800;
+	box-shadow: 0 8px 18px rgba(91, 61, 245, 0.25) !important;
+}
+
+.ceqg-settings .ceqg-save-button:hover,
+.ceqg-settings .ceqg-save-button:focus {
+	border-color: #472bd5 !important;
+	background: #472bd5 !important;
+}
+
+@media (max-width: 1080px) {
+	.ceqg-hero {
+		grid-template-columns: 1fr;
+	}
+
+	.ceqg-hero__summary {
+		max-width: 560px;
+	}
+
+	.ceqg-badges {
+		justify-content: flex-start;
+	}
+
+	.ceqg-grid--rules {
+		grid-template-columns: repeat(2, minmax(180px, 1fr));
+	}
+}
+
+@media (max-width: 782px) {
+	.ceqg-settings {
+		margin: 16px 12px 0 0;
+	}
+
+	.ceqg-hero {
+		padding: 22px;
+	}
+
+	.ceqg-hero__top {
+		display: grid;
+		gap: 16px;
+		margin-bottom: 20px;
+	}
+
+	.ceqg-logo {
+		width: min(206px, 100%);
+	}
+
+	.ceqg-hero h1 {
+		font-size: 24px;
+	}
+
+	.ceqg-summary-heading {
+		display: grid;
+		align-items: start;
+	}
+
+	.ceqg-summary-heading strong {
+		text-align: left;
+	}
+
+	.ceqg-rule-metrics {
+		grid-template-columns: 1fr;
+	}
+
+	.ceqg-grid--rules {
+		grid-template-columns: 1fr;
+	}
+
+	.ceqg-input--number {
+		max-width: 100%;
+	}
+
+	.ceqg-actions {
+		position: static;
+		display: grid;
+	}
+
+	.ceqg-form {
+		padding-bottom: 0;
+	}
+
+	.ceqg-settings .ceqg-save-button {
+		width: 100%;
+	}
+}
