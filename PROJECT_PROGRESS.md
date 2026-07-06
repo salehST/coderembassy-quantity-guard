@@ -5,23 +5,25 @@ Last updated: 2026-07-06
 ## Project Identity
 
 - Plugin name: CoderEmbassy Quantity Guard for WooCommerce
-- Current version: 0.1.0
+- Current version: 1.0.0
 - Free plugin repository: https://github.com/salehST/coderembassy-quantity-guard.git
 - Pro plugin repository for future pro work only: https://github.com/salehST/coderembassy-quantity-guard-pro.git
 - Workspace path: `C:\Users\User\Desktop\My Plugins\New Plugin\coderembassy-quantity-guard`
 - Localhost test plugin path: `C:\laragon\www\plugins\wp-content\plugins\coderembassy-quantity-guard`
-- Latest pushed commit: `6db1ca4 Polish Quantity Guard admin dashboard`
-- Latest ZIP built: `C:\Users\User\Desktop\My Plugins\New Plugin\releases\coderembassy-quantity-guard-release-20260706-201954\coderembassy-quantity-guard-0.1.0.zip`
+- Release prep baseline commit: `578c8d1 Add project progress handoff`
+- Latest ZIP built: `C:\Users\User\Desktop\My Plugins\New Plugin\releases\coderembassy-quantity-guard-release-20260706-205254\coderembassy-quantity-guard-1.0.0.zip`
 
 ## Current Status
 
-- Free plugin implementation is functionally complete for the planned 0.1.0 build.
+- Free plugin implementation is functionally complete for the planned 1.0.0 release.
 - User manually tested the core quantity behavior and reported it working.
 - Admin dashboard was branded with the CoderEmbassy logo and modernized.
 - Dashboard now suppresses unrelated third-party admin notices on the Quantity Guard settings page.
 - Source includes only one active logo asset: `admin/images/logo-light.png`.
-- GitHub free repo has been pushed through commit `6db1ca4`.
-- Working tree was clean after the push and ZIP build, before this progress file was created.
+- Source release metadata is updated to `1.0.0`.
+- Translation template now includes the dashboard strings.
+- Final local smoke checks passed after copying the updated plugin to Laragon.
+- Final installable `1.0.0` ZIP has been built and inspected.
 
 ## Completed Phases
 
@@ -94,6 +96,8 @@ Last updated: 2026-07-06
 - [x] Variation-level overrides work
 - [x] Cart/classic validation works
 - [x] Admin dashboard branding and one-logo layout accepted for now
+- [x] Final `1.0.0` admin save smoke passed with global rule min `3`, max `9`, step `3`, default `3`
+- [x] Final `1.0.0` storefront quantity smoke passed on product `Bivoks Salve - Stick`
 
 ## Verification Commands Used
 
@@ -118,6 +122,7 @@ git status --short
 
 ## Recent Commits
 
+- `578c8d1` Add project progress handoff
 - `6db1ca4` Polish Quantity Guard admin dashboard
 - `fe776a8` Keep variation quantity spinner aligned with rules
 - `0613de3` Show warnings for adjusted maximum quantities
@@ -131,18 +136,18 @@ git status --short
 
 ## Next Tasks
 
-- [ ] Decide whether the first public/free release should stay `0.1.0` or become `1.0.0`.
-- [ ] If releasing as `1.0.0`, update:
-  - [ ] Plugin header version in `coderembassy-quantity-guard.php`
-  - [ ] `CEQG_VERSION`
-  - [ ] `readme.txt` stable tag
-  - [ ] ZIP filename
-- [ ] Regenerate or update `languages/coderembassy-quantity-guard.pot` because the dashboard added new translatable strings.
-- [ ] Do one final admin save test after the dashboard polish.
-- [ ] Do one final product page quantity test after the dashboard polish, just to ensure no accidental regression.
+- [x] Decide whether the first public/free release should stay `0.1.0` or become `1.0.0`: release as `1.0.0`.
+- [x] If releasing as `1.0.0`, update:
+  - [x] Plugin header version in `coderembassy-quantity-guard.php`
+  - [x] `CEQG_VERSION`
+  - [x] `readme.txt` stable tag
+  - [x] ZIP filename
+- [x] Regenerate or update `languages/coderembassy-quantity-guard.pot` because the dashboard added new translatable strings.
+- [x] Do one final admin save test after the dashboard polish.
+- [x] Do one final product page quantity test after the dashboard polish, just to ensure no accidental regression.
 - [ ] Optionally test Store API directly with invalid and valid quantities.
-- [ ] Build final release ZIP after the version decision.
-- [ ] If version is final, create a GitHub tag such as `v0.1.0` or `v1.0.0`.
+- [x] Build final release ZIP after the version decision.
+- [ ] If version is final, create a GitHub tag such as `v1.0.0`.
 - [ ] Optional: create a GitHub release and attach the ZIP.
 - [ ] Optional: add plugin screenshots or banner assets if this will be distributed beyond direct ZIP install.
 

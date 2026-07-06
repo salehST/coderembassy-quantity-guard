@@ -2,11 +2,363 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: CoderEmbassy Quantity Guard for WooCommerce 0.1.0\n"
+"Project-Id-Version: CoderEmbassy Quantity Guard for WooCommerce 1.0.0\n"
 "Report-Msgid-Bugs-To: https://coderembassy.com/\n"
-"POT-Creation-Date: 2026-07-04 00:00+0000\n"
+"POT-Creation-Date: 2026-07-06 00:00+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Codex\n"
 "X-Domain: coderembassy-quantity-guard\n"
+
+#: includes/class-ceqg-settings.php:54
+msgid "{product_name} allows a maximum quantity of {max_qty}."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:55
+msgid "{product_name} must be purchased in multiples of {step_qty}."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:53
+msgid "{product_name} requires a minimum quantity of {min_qty}."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:204
+msgid "Active"
+msgstr ""
+
+#: includes/class-ceqg-debug.php:57
+msgid "Active source"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:279
+msgid "Apply quantity rules to products, cart, checkout, and compatible WooCommerce blocks."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:220
+msgid "Blocks ready"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:358
+msgid "Choose what happens to Quantity Guard data during uninstall."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:215
+msgid "CoderEmbassy"
+msgstr ""
+
+#: coderembassy-quantity-guard.php
+msgid "CoderEmbassy Quantity Guard for WooCommerce"
+msgstr ""
+
+#: includes/class-ceqg-plugin.php:107
+msgid "CoderEmbassy Quantity Guard requires WooCommerce to be installed and active."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:270
+msgid "Control whether Quantity Guard rules run on the storefront."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:230
+msgid "Current global quantity rule summary"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:232
+msgid "Current setup"
+msgstr ""
+
+#: includes/class-ceqg-product-fields.php:113 includes/class-ceqg-variation-fields.php:101
+msgid "Custom message"
+msgstr ""
+
+#: includes/class-ceqg-debug.php:102
+msgid "Custom message from the active rule"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:329
+msgid "Customer-facing validation text for product, cart, checkout, and Store API errors."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:312
+msgid "Customers must buy in this increment."
+msgstr ""
+
+#: includes/class-ceqg-debug.php:73 includes/class-ceqg-settings.php:253
+msgid "Default"
+msgstr ""
+
+#: includes/class-ceqg-product-fields.php:107 includes/class-ceqg-settings.php:316 includes/class-ceqg-variation-fields.php:93
+msgid "Default quantity"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:366
+msgid "Delete data on uninstall"
+msgstr ""
+
+#: includes/class-ceqg-product-fields.php:77
+msgid "Enable product quantity rule"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:278
+msgid "Enable Quantity Guard"
+msgstr ""
+
+#: includes/class-ceqg-variation-fields.php:64
+msgid "Enable variation quantity rule"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:290
+msgid "Fallback rules used when a product or variation has no custom rule."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:217
+msgid "FREE"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:269
+msgid "General"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:233
+msgid "Global fallback rule"
+msgstr ""
+
+#: includes/class-ceqg-debug.php:105
+msgid "Global message templates"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:289
+msgid "Global Quantity Rules"
+msgstr ""
+
+#: includes/class-ceqg-messages.php:120 includes/class-ceqg-rule-engine.php:74
+msgid "Global Rule"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:219
+msgid "HPOS ready"
+msgstr ""
+
+#: includes/class-ceqg-product-fields.php:94 includes/class-ceqg-settings.php:305
+msgid "Leave empty for no plugin-defined maximum."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:357
+msgid "Maintenance"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:245
+msgid "Max"
+msgstr ""
+
+#: includes/class-ceqg-debug.php:65
+msgid "Maximum"
+msgstr ""
+
+#: includes/class-ceqg-product-fields.php:92 includes/class-ceqg-settings.php:303 includes/class-ceqg-variation-fields.php:79
+msgid "Maximum quantity"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:341
+msgid "Maximum quantity message"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:497
+msgid "Maximum quantity was lower than the minimum, so it was adjusted to match the minimum."
+msgstr ""
+
+#: includes/class-ceqg-debug.php:77
+msgid "Message source"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:328
+msgid "Messages"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:241
+msgid "Min"
+msgstr ""
+
+#: includes/class-ceqg-debug.php:61
+msgid "Minimum"
+msgstr ""
+
+#: includes/class-ceqg-debug.php:81
+msgid "Minimum message sample"
+msgstr ""
+
+#: includes/class-ceqg-product-fields.php:85 includes/class-ceqg-settings.php:297 includes/class-ceqg-variation-fields.php:72
+msgid "Minimum quantity"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:336
+msgid "Minimum quantity message"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:202
+msgid "No limit"
+msgstr ""
+
+#: includes/class-ceqg-messages.php:167
+msgid "no maximum"
+msgstr ""
+
+#: includes/class-ceqg-debug.php:123
+msgid "No product or variation rule is active, so the global rule applies."
+msgstr ""
+
+#: includes/class-ceqg-frontend.php:128
+msgid "none"
+msgstr ""
+
+#: includes/class-ceqg-debug.php:66
+msgid "None"
+msgstr ""
+
+#: includes/class-ceqg-product-fields.php:121
+msgid "Optional. Used for this product rule when validation fails."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:205
+msgid "Paused"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:468
+msgid "Placeholders: {product_name}, {min_qty}, {max_qty}, {step_qty}, {default_qty}, {rule_source}"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:216
+msgid "Plugin status"
+msgstr ""
+
+#: includes/class-ceqg-product-fields.php:102 includes/class-ceqg-product-fields.php:87
+msgid "Positive integer. Defaults to 1 when empty or invalid."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:318
+msgid "Prefills product-page quantity inputs."
+msgstr ""
+
+#: includes/class-ceqg-product-fields.php:109
+msgid "Prefills the product-page quantity field."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:376
+msgid "Product and variation overrides continue to take priority over global rules."
+msgstr ""
+
+#: includes/class-ceqg-rule-engine.php:105
+msgid "Product Rule"
+msgstr ""
+
+#: includes/class-ceqg-product-fields.php:40 includes/class-ceqg-settings.php:83 includes/class-ceqg-settings.php:84
+msgid "Quantity Guard"
+msgstr ""
+
+#: includes/class-ceqg-product-fields.php:173
+msgid "Quantity Guard adjusted the product maximum to match the product minimum because maximum cannot be lower than minimum."
+msgstr ""
+
+#: includes/class-ceqg-variation-fields.php:153
+msgid "Quantity Guard adjusted the variation maximum to match the variation minimum because maximum cannot be lower than minimum."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:224
+msgid "Quantity Guard for WooCommerce"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:395
+msgid "Quantity Guard settings saved."
+msgstr ""
+
+#: includes/class-ceqg-product-fields.php:192
+msgid "Quantity Guard tip: for smoother Cart and Checkout block controls, use a product minimum that is a multiple of the product step."
+msgstr ""
+
+#: includes/class-ceqg-variation-fields.php:172
+msgid "Quantity Guard tip: for smoother Cart and Checkout block controls, use a variation minimum that is a multiple of the variation step."
+msgstr ""
+
+#: includes/class-ceqg-frontend.php:129 includes/class-ceqg-messages.php:56
+msgid "Quantity: minimum {min_qty}, maximum {max_qty}, step {step_qty}."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:367
+msgid "Remove Quantity Guard settings and rule meta when uninstalling the plugin."
+msgstr ""
+
+#: includes/class-ceqg-debug.php:53
+msgid "Rule debugger"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:378
+msgid "Save settings"
+msgstr ""
+
+#: includes/class-ceqg-frontend.php:180
+msgid "Select quantity"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:226
+msgid "Set storewide quantity rules, then override them per product or variation when a product needs different buying limits."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:299
+msgid "Smallest quantity customers can buy."
+msgstr ""
+
+#: coderembassy-quantity-guard.php
+msgid "Smart minimum, maximum, default, and step quantity rules for WooCommerce products and variations."
+msgstr ""
+
+#: includes/class-ceqg-debug.php:69 includes/class-ceqg-settings.php:249
+msgid "Step"
+msgstr ""
+
+#: includes/class-ceqg-product-fields.php:100 includes/class-ceqg-settings.php:310 includes/class-ceqg-variation-fields.php:86
+msgid "Step quantity"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:346
+msgid "Step quantity message"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:375
+msgid "Storefront rules update immediately after saving."
+msgstr ""
+
+#: includes/class-ceqg-debug.php:116
+msgid "The selected variation has its own enabled rule, so it replaces product and global rules."
+msgstr ""
+
+#: includes/class-ceqg-messages.php:191
+msgid "This product"
+msgstr ""
+
+#: includes/class-ceqg-debug.php:120
+msgid "This product has its own enabled rule, so it replaces the global rule."
+msgstr ""
+
+#: includes/class-ceqg-settings.php:512
+msgid "Tip: for the smoothest Cart and Checkout block controls, use a global minimum that is a multiple of the global step."
+msgstr ""
+
+#: includes/class-ceqg-product-fields.php:78
+msgid "Use this product rule instead of the global rule."
+msgstr ""
+
+#: includes/class-ceqg-rule-engine.php:136
+msgid "Variation Rule"
+msgstr ""
+
+#: includes/class-ceqg-debug.php:85
+msgid "Why this rule applies"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:223
+msgid "WooCommerce quantity control"
+msgstr ""
+
+#: includes/class-ceqg-settings.php:158 includes/class-ceqg-settings.php:197
+msgid "You do not have permission to manage Quantity Guard settings."
+msgstr ""

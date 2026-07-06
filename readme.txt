@@ -4,7 +4,7 @@ Tags: quantity, min quantity, max quantity, woocommerce blocks, quantity step
 Requires at least: 6.4
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: trunk
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,9 +72,9 @@ No. In this free version, maximum quantity means maximum per cart line item.
 
 == Changelog ==
 
-= 0.1.0 =
+= 1.0.0 =
 
-* Initial development release.
+* Initial stable release.
 * Added global, product, and variation quantity rules.
 * Added frontend quantity updates and variation live updates.
 * Added classic WooCommerce validation and Store API validation.
@@ -82,6 +82,6 @@ No. In this free version, maximum quantity means maximum per cart line item.
 
 == Upgrade Notice ==
 
-= 0.1.0 =
+= 1.0.0 =
 
-Initial development release.
+Initial stable release.

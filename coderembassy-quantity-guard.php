@@ -3,7 +3,7 @@
  * Plugin Name: CoderEmbassy Quantity Guard for WooCommerce
  * Plugin URI: https://coderembassy.com/
  * Description: Smart minimum, maximum, default, and step quantity rules for WooCommerce products and variations.
- * Version: 0.1.0
+ * Version: 1.0.0
  * Author: CoderEmbassy
  * Author URI: https://coderembassy.com/
  * Text Domain: coderembassy-quantity-guard
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'CEQG_VERSION', '0.1.0' );
+define( 'CEQG_VERSION', '1.0.0' );
 define( 'CEQG_PLUGIN_FILE', __FILE__ );
 define( 'CEQG_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'CEQG_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
